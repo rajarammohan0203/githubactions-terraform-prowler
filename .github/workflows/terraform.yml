@@ -75,6 +75,7 @@ jobs:
          to: rajaram.s@cloudifyops.com
          from: github-action@gamil.com
          body: Build job of ${{github.repository}} completed successfully!
+         attachments: ./home/runner/work/githubactions-terraform-prowler/githubactions-terraform-prowler/prowler/output/*.html
          
          
     
