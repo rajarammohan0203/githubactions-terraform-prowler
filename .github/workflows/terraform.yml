@@ -58,7 +58,8 @@ jobs:
           git clone https://github.com/prowler-cloud/prowler
           ls
           cd prowler/
-          ./prowler -c check310 -r us-east-1 -f us-east-1 -M csv 
+          ./prowler -c check22 -r us-east-1 -M csv -B aws-raja-emr-output/prowler/ 
+          
           
        
           
