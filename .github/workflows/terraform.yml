@@ -58,7 +58,21 @@ jobs:
           git clone https://github.com/prowler-cloud/prowler
           ls
           cd prowler/
-          ./prowler -c check22 -r us-east-1 -M csv -B aws-raja-emr-output/prowler/ 
+          ./prowler -c check22 -r us-east-1 -M csv -B aws-raja-emr-output/prowler/
+      - name: Send email
+        id: email
+        uses: dawidd6/action-send-mail@v3.7.1
+        with:
+         server_address: smtp.gmail.com
+         server_port: 465
+         secure: true
+         username: ${{secrets.MAIL_USERNAME}}
+         password: ${{secrets.MAIL_PASSWORD}}
+         subject: Prowler scan Report
+         to: rajaram.s@cloudifyops.com
+         from: github-action@gamil.com
+         body: Build job of ${{github.repository}} completed successfully!
+    
           
           
        
