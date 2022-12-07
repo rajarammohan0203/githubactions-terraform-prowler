@@ -49,9 +49,9 @@ jobs:
         id: git
         run: | 
           git --version
-          apt update
-          apt install python3 python3-pip jq git zip
-          pip install detect-secrets==1.0.3
+          sudo apt update
+          sudo apt install python3 python3-pip jq git zip
+          sudo pip install detect-secrets==1.0.3
         continue-on-error: true
    
           
