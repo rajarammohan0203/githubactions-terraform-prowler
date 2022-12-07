@@ -33,7 +33,7 @@ jobs:
         working-directory: ./terraform/vpc/environment/dev         
       - name: Terraform Validate
         id: validate
-        run: terraform validate -no-color  
+        run: terraform validate  
         working-directory: ./terraform/vpc/environment/dev       
       - name: Terraform Plan
         id: plan
