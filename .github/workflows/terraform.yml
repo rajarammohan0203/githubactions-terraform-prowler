@@ -58,7 +58,8 @@ jobs:
           git clone https://github.com/prowler-cloud/prowler
           ls
           cd prowler/
-          ./prowler -c check22 -r us-east-1 -M csv -B aws-raja-emr-output/prowler/
+          ./prowler -c check22 -r us-east-1 -M html -B aws-raja-emr-output/prowler/
+          pwd
       - name: Send email
         id: email
         uses: dawidd6/action-send-mail@v3.7.1
@@ -72,8 +73,7 @@ jobs:
          to: rajaram.s@cloudifyops.com
          from: github-action@gamil.com
          body: Build job of ${{github.repository}} completed successfully!
-         run: |
-            ls
+         
     
           
           
