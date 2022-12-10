@@ -61,7 +61,7 @@ jobs:
           ./prowler -c check22 -r us-east-1 -M html -B aws-raja-emr-output/prowler/
           pwd
           cd /home/runner/work/githubactions-terraform-prowler/githubactions-terraform-prowler/prowler/output 
-          ls
+          ls -ah
       - name: Send email
         id: email
         uses: dawidd6/action-send-mail@v3.7.1
