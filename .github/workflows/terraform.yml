@@ -45,13 +45,7 @@ jobs:
         run: terraform apply -auto-approve
         continue-on-error: true
         working-directory: ./terraform/vpc/environment/dev 
-      - name: git-bash
-        id: git
-        run: | 
-          git --version
-          sudo apt update
-          sudo apt install python3 python3-pip jq git zip
-          sudo pip install detect-secrets==1.0.3
+      
       - name: prowler-scan
         id: prowler
         run: | 
