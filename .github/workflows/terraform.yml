@@ -57,8 +57,8 @@ jobs:
           sudo apt-get install python3-distutils
           curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
           sudo python3.9 get-pip.py
-          pip3.9 install prowler
-          prowler -v
+          
+          
           pwd
           ls -ah
 
