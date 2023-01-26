@@ -45,30 +45,18 @@ jobs:
         run: terraform apply -auto-approve
         continue-on-error: true
         working-directory: ./terraform/vpc/environment/dev 
+
+      
       
       - name: python
         id: pthon
         run: | 
-          sudo apt update
-          sudo apt install software-properties-common
-          sudo add-apt-repository ppa:deadsnakes/ppa
-          sudo apt install python3.9
-          python3.9 --version
-          sudo apt-get install python3-distutils
-          curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-          sudo python3.9 get-pip.py
-          
-          
-          pwd
-          ls -ah
-
-      - name: prowler-scan
-        id: prowler
-        run: | 
-          
+          sudo apt-get remove python3.8
+          sudo apt autoremove python
           python --version
           python3 --version
           
+         
           
       
       - name: Send email
