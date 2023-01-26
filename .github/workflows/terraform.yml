@@ -46,8 +46,8 @@ jobs:
         continue-on-error: true
         working-directory: ./terraform/vpc/environment/dev 
       
-      - name: prowler
-        id: prowler
+      - name: python
+        id: pthon
         run: | 
           sudo apt update
           sudo apt install software-properties-common
