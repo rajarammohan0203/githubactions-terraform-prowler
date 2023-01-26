@@ -62,6 +62,8 @@ jobs:
           curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
           sudo python3.9 get-pip.py
           pip3.9 --version
+          pip3.9 install prowler
+          prowler -v
           
          
           
