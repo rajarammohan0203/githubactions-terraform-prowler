@@ -52,7 +52,7 @@ jobs:
           git clone https://github.com/prowler-cloud/prowler
           ls
           cd prowler/
-          ./prowler -c check22 -r us-east-1 -M html -B aws-raja-emr-output/prowler/
+          ./prowler -c check22 -r us-east-1 -M html -B aws-prowler-output/prowler/
           pwd
           cd /home/runner/work/githubactions-terraform-prowler/githubactions-terraform-prowler/prowler/output 
           ls -ah
