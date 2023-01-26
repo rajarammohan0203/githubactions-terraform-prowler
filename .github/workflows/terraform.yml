@@ -49,7 +49,7 @@ jobs:
       
       
       - name: python
-        id: pthon
+        id: python
         run: | 
           sudo apt-get remove python3.8
           sudo apt autoremove python
@@ -64,6 +64,13 @@ jobs:
           pip3.9 --version
           pip3.9 install prowler
           prowler -v
+
+      - name: prowler
+        id: prowler
+        run: | 
+          prowler -v
+          prowler aws --list-services
+          prowler aws --services s3 ec2
           
          
           
