@@ -71,6 +71,7 @@ jobs:
           prowler -v
           prowler aws --list-services
           prowler aws --services s3 ec2
+          prowler aws --services iam
           
          
           
