@@ -66,8 +66,9 @@ jobs:
         id: prowler
         run: | 
           
-          pip3.9 install prowler
-          prowler -v
+          python --version
+          python3 --version
+          
           
       
       - name: Send email
