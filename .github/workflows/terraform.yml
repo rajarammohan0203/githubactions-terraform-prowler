@@ -90,6 +90,7 @@ jobs:
         run: | 
           prowler -v
           prowler aws --services s3 ec2 vpc iam
+          prowler aws -f us-east-1
           
           
          
